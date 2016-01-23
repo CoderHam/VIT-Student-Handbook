@@ -113,7 +113,7 @@ function clearData($scope) {
 }
 function find_article($http, $scope) {
     $http({
-        method: 'POST',
+        method: 'GET',
         url: '/input/find',
         data: $.param($scope.formDataFind),  // pass in data as strings
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)

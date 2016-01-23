@@ -89,9 +89,9 @@ router.post('/news',authenticate,function(req,res){
        });
     });
 
-router.get('/find', function (request, response) {
+router.post('/find', function (request, response) {
     var collection = request.db.collection('articles');
-    var topic = request.query.f_topic;
+    var topic = request.body.f_topic;
     console.log(topic);
     var onSearch = function (err, docs) {
         if (err) {

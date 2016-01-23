@@ -70,7 +70,7 @@ var onConnect = function (err, db) {
 mongoClient.connect(mongoURI, mongodbOptions, onConnect);
 
 app.use(function (request, response, next) {
-    request.db = db;
+    request.db = mongo;
 
         // Website you wish to allow to connect
     response.header('Access-Control-Allow-Origin', '*');
